@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "snipeit": {
+      "type": "streamable-http",
+      "url": "https://snipeit-mcp-server.YOUR-SUBDOMAIN.workers.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_MCP_BEARER_TOKEN"
+      }
+    }
+  }
+}

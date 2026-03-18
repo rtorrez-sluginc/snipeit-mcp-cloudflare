@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+node_modules/
+build/
+build-http/
+*.tsbuildinfo
+.claude/
+.wrangler/
+.dev.vars

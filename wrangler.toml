@@ -1,0 +1,29 @@
+name = "snipeit-mcp-server"
+main = "src/worker.ts"
+compatibility_date = "2025-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ─── Secrets Store bindings ──────────────────────────────────────────────────
+# Create your Secrets Store and secrets first:
+#   npx wrangler secrets-store create snipeit-secrets
+#   npx wrangler secrets-store secret create snipeit-secrets SNIPEIT_URL --value "https://your-instance.snipeit.com"
+#   npx wrangler secrets-store secret create snipeit-secrets SNIPEIT_API_TOKEN --value "your-api-token"
+#
+# Then update the store_id below with the ID returned by the create command.
+# ─────────────────────────────────────────────────────────────────────────────
+
+[[secrets_store_secrets]]
+binding = "SNIPEIT_URL"
+store_id = "YOUR_STORE_ID_HERE"
+secret_name = "SNIPEIT_URL"
+
+[[secrets_store_secrets]]
+binding = "SNIPEIT_API_TOKEN"
+store_id = "YOUR_STORE_ID_HERE"
+secret_name = "SNIPEIT_API_TOKEN"
+
+# Bearer token for authenticating MCP clients (REQUIRED)
+[[secrets_store_secrets]]
+binding = "MCP_BEARER_TOKEN"
+store_id = "YOUR_STORE_ID_HERE"
+secret_name = "MCP_BEARER_TOKEN"
